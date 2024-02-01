@@ -5,7 +5,6 @@ ESX.RegisterCommand("setfaction, {"admin"}, function(xPlayer, args, showError)
     local grade = tonumber(args[3])
 
     local xTarget = ESX.GetPlayerFromId(target)
-    if xTarget.identifier == nil then return end
     if not xTarget then return end
     xTarget.setMeta("faction", {
         faction = name,
